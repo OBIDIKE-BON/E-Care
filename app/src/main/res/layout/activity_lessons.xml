@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.LessonsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/lessonsToolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/lessonsToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_lessons" />
+
+
+
+    <!--    <WebView-->
+    <!--        android:id="@+id/wv_lesson"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginLeft="8dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:layout_marginRight="8dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/fab"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        android:layout_margin="@dimen/fab_margin">-->
+
+    <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:src="@android:color/transparent" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center|center_vertical"-->
+    <!--            android:elevation="16dp"-->
+    <!--            android:text="Quiz"-->
+    <!--            android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--            android:textColor="@android:color/white" />-->
+    <!--    </FrameLayout>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginBottom="@dimen/dp16"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="@dimen/dp30"
+        app:cardElevation="@dimen/dp8">
+
+        <TextView
+            android:id="@+id/txt_fab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:onClick="startQuiz"
+            android:padding="@dimen/dp8"
+            android:text="@string/quiz_fab"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="#FFFFFF" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

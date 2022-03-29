@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/prifile_tab_title" />
+        <item
+            android:id="@+id/nav_lessons"
+            android:title="@string/lessons_tab_title" />
+        <item
+            android:id="@+id/nav_quizzes"
+            android:title="@string/quizzes_tab_title" />
+    </group>
+
+
+    <item android:title="quiz level">
+
+        <menu >
+            <item android:title="Amature" />
+            <item android:title="Intermediate" />
+            <item android:title="Proffesional" />
+            <item android:title="Legendry" />
+        </menu>
+    </item>
+</menu>
